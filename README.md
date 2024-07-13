@@ -1,40 +1,77 @@
-A Sales Management API is designed to help manage the various aspects of sales operations, such as customer information, product details, orders, inventory, and sales tracking. Here’s a basic outline of what such an API might include, with some example endpoints:
+Sales Management System
 
-Authentication
-POST /auth/login: Log in a user and provide a token.
-POST /auth/register: Register a new user.
-POST /auth/logout: Log out a user.
-Customers
-GET /customers: Retrieve a list of all customers.
-GET /customers/{id}: Retrieve details for a specific customer.
-POST /customers: Create a new customer.
-PUT /customers/{id}: Update details for a specific customer.
-DELETE /customers/{id}: Delete a specific customer.
-Products
-GET /products: Retrieve a list of all products.
-GET /products/{id}: Retrieve details for a specific product.
+This project is a Sales Management System implemented using the Spring Boot framework. It provides a RESTful API for managing products, clients, sales operations, and reporting. It includes features for user authentication, logging, and auditing to track important system activities.
+
+Features
+
+Products Management: Manage product details including name, description, category, quantity, and price.
+
+Clients Management: Manage client details including name, last name, mobile, email, and address.
+
+Sales Operations Management: Manage sales transactions including creation, update, and viewing of sales.
+
+Reporting: Generate various reports related to sales, clients, and products.
+
+User Authentication: Secure the API with authentication and authorization.
+
+Logging and Auditing: Track and log important system activities and changes.
+
+Technologies
+
+Spring Boot
+
+Spring Data JPA
+
+Spring Security
+
+Hibernate
+
+MySQL/PostgreSQL (or any other relational database)
+
+Lombok
+
+API Endpoints
+
+Products Management
+
+GET /products: Fetch all products.
+
+GET /products/{id}: Fetch a product by ID.
+
 POST /products: Create a new product.
-PUT /products/{id}: Update details for a specific product.
-DELETE /products/{id}: Delete a specific product.
-Orders
-GET /orders: Retrieve a list of all orders.
-GET /orders/{id}: Retrieve details for a specific order.
-POST /orders: Create a new order.
-PUT /orders/{id}: Update details for a specific order.
-DELETE /orders/{id}: Delete a specific order.
-Inventory
-GET /inventory: Retrieve inventory levels for all products.
-GET /inventory/{productId}: Retrieve inventory levels for a specific product.
-POST /inventory: Add inventory for a product.
-PUT /inventory/{productId}: Update inventory levels for a specific product.
-Sales Tracking
-GET /sales: Retrieve sales data.
-GET /sales/{id}: Retrieve sales data for a specific sale.
-POST /sales: Record a new sale.
-PUT /sales/{id}: Update a specific sale record.
-DELETE /sales/{id}: Delete a specific sale record.
-Reports
-GET /reports/sales: Generate a sales report.
-GET /reports/customers: Generate a customer report.
+
+PUT /products/{id}: Update an existing product.
+
+DELETE /products/{id}: Delete a product.
+
+Clients Management
+
+GET /clients: Fetch all clients.
+
+GET /clients/{id}: Fetch a client by ID.
+
+POST /clients: Create a new client.
+
+PUT /clients/{id}: Update an existing client.
+
+DELETE /clients/{id}: Delete a client.
+
+Sales Operations
+
+GET /sales: Fetch all sales operations.
+
+GET /sales/{id}: Fetch a sale by ID.
+
+POST /sales: Create a new sale with multiple transactions.
+
+PUT /sales/{id}: Edit quantities and prices of a sale.
+
+Reporting
+
+GET /reports/sales: Generate a sales report for a specific date range.
+
+GET /reports/clients: Generate a client report.
+
 GET /reports/products: Generate a product report.
-GET /reports/inventory: Generate an inventory report.
+
+
